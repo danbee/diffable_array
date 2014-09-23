@@ -51,12 +51,12 @@ describe DiffableArray do
     array1 = DiffableArray.new(['grapefruit', 'banana', 'lemon'])
     array2 = DiffableArray.new(['lemon', 'grapefruit', 'banana'])
 
-    expected_result = ['lemon', 'grapefruit', 'banana']
+    expected_result = ['grapefruit', 'banana', 'lemon']
 
     merged_array = array1.diff_merge(array2)
     expect(merged_array).to eq(expected_result)
 
-    expected_result = ['grapefruit', 'banana', 'lemon']
+    expected_result = ['lemon', 'grapefruit', 'banana']
 
     merged_array = array2.diff_merge(array1)
     expect(merged_array).to eq(expected_result)
